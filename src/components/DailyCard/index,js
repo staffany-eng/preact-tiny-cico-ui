@@ -1,0 +1,67 @@
+import styled from "styled-components";
+
+const DailyCard = () => {
+  return (
+    <Container>
+      <Row>
+        <SectionName>Section 3X</SectionName>
+        <SectionCode>S3X</SectionCode>
+      </Row>
+      <OrgName>Potato Org</OrgName>
+      <hr />
+    </Container>
+  );
+};
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+`;
+const ClockInButton = styled.button`
+  width: 248px;
+  height: 60px;
+
+  background: #45beb4;
+  border-radius: 4px;
+`;
+const SectionName = styled.p`
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+
+  color: #000000;
+`;
+const OrgName = styled.p`
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+
+  color: #5e5e5e;
+`;
+const SectionCode = styled.button`
+  width: 41px;
+  height: 22px;
+
+  background: #ffffff;
+
+  border: 1px solid #9b9b9b;
+  border-radius: 4px;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+
+  color: #000000;
+`;
+const Row = styled.div`
+  display: flex;
+`;
+export default DailyCard;
