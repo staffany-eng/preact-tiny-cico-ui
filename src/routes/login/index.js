@@ -1,3 +1,4 @@
+import { Link } from "preact-router";
 import styled from "styled-components";
 
 const Login = () => {
@@ -8,8 +9,16 @@ const Login = () => {
       <SubTitle>🥔 Potato Edition</SubTitle>
       <StyledForm>
         <StyledFormLabel>Your Phone Number</StyledFormLabel>
-        <StyledTextInput type="text" placeholder="+62" />
-        <StyledSubmit>Login</StyledSubmit>
+        <StyledTextInput type="number" placeholder="+62" />
+        <Link href="/">
+          <StyledSubmit
+            onClick={(e) => {
+              e.preventDefault;
+            }}
+          >
+            Login
+          </StyledSubmit>
+        </Link>
       </StyledForm>
     </Container>
   );
@@ -65,6 +74,7 @@ const StyledTextInput = styled.input`
   height: 40px;
 
   background: #ffffff;
+  color: #000000;
 
   border: 1px solid #d9d9d9;
   border-radius: 4px;
@@ -74,16 +84,19 @@ const StyledTextInput = styled.input`
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
+
+  width: 100%;
 `;
 const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
+  width: 100%;
 `;
 const StyledSubmit = styled.button`
   padding: 8px 24px;
   gap: 8px;
 
-  width: 255px;
+  width: 100%;
   height: 40px;
   left: 31px;
   top: 246px;
@@ -98,7 +111,9 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   align-self: center;
+  width: 100%;
 `;
 
 export default Login;

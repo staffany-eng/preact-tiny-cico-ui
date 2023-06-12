@@ -1,3 +1,4 @@
+import { route } from "preact-router";
 import styled from "styled-components";
 
 const ClockedOutCard = () => {
@@ -10,7 +11,9 @@ const ClockedOutCard = () => {
       <OrgName>Potato Org</OrgName>
       <Divider />
 
-      <ClockOutButton>💪 Work More</ClockOutButton>
+      <ClockOutButton onClick={() => route("/login")}>
+        💪 Work More
+      </ClockOutButton>
 
       <Row>
         <Timing name="CLOCK IN" number="09:00" />

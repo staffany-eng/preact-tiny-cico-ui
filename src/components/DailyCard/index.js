@@ -1,3 +1,4 @@
+import { route } from "preact-router";
 import styled from "styled-components";
 
 const DailyCard = () => {
@@ -11,7 +12,9 @@ const DailyCard = () => {
       <Divider />
       <ShiftString>Today 09:00 - 18:00 | 9h</ShiftString>
       <RoleName>Role</RoleName>
-      <ClockInButton>Clock-in</ClockInButton>
+      <ClockInButton onClick={() => route("/geolocation")}>
+        Clock-in
+      </ClockInButton>
     </Container>
   );
 };

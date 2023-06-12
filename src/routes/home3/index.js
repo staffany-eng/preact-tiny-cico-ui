@@ -1,10 +1,9 @@
 import { useState } from "preact/hooks";
 import styled from "styled-components";
-import DailyCard from "../../components/DailyCard/index.js";
-import ClockedInCard from "../../components/ClockedInCard/index.js";
 import ClockedOutCard from "../../components/ClockedOutCard/index.js";
 
-const Home = () => {
+const Home3 = () => {
+  // eslint-disable-next-line no-unused-vars
   const [time, setTime] = useState(Date.now());
 
   return (
@@ -18,7 +17,7 @@ const Home = () => {
           day: "numeric",
         })}
       </StyledDate>
-      <DailyCard />
+      <ClockedOutCard />
     </Container>
   );
 };
@@ -52,4 +51,4 @@ const Container = styled.div`
   width: 100%;
 `;
 
-export default Home;
+export default Home3;
