@@ -1,10 +1,14 @@
 import { useState } from "preact/hooks";
 import styled from "styled-components";
+import DailyCard from "../../components/DailyCard/index.js";
+import ClockedInCard from "../../components/ClockedInCard/index.js";
+import ClockedOutCard from "../../components/ClockedOutCard/index.js";
+
 const Home = () => {
   const [time, setTime] = useState(Date.now());
 
   return (
-    <div>
+    <Container>
       <StyledName>Hey Royhan Mardista!</StyledName>
       <StyledDate>
         {new Date(time).toLocaleString("en-US", {
@@ -14,7 +18,10 @@ const Home = () => {
           day: "numeric",
         })}
       </StyledDate>
-    </div>
+      <DailyCard />
+      <ClockedInCard />
+      <ClockedOutCard />
+    </Container>
   );
 };
 
@@ -26,6 +33,8 @@ const StyledName = styled.h1`
   line-height: 32px;
 
   color: #000000;
+
+  margin: 0px;
 `;
 const StyledDate = styled.h2`
   font-family: "Montserrat";
@@ -35,6 +44,14 @@ const StyledDate = styled.h2`
   line-height: 16px;
 
   color: #000000;
+
+  margin: 0px;
+  margin-bottom: 20px;
+`;
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 `;
 
 export default Home;
